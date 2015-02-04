@@ -1,0 +1,7 @@
+[default]
+exten => 233,1,AGI(juice-agi.php)
+exten => 233,1,Hangup
+
+[from-internal]
+exten => 233,1,AGI(juice-agi.php)
+exten => 233,1,Hangup

@@ -1,0 +1,9 @@
+[twinkle]
+username=twinkle
+secret=twinkle
+host=dynamic
+dtmfmode=rfc2833
+insecure=port,invite
+context=from-internal
+type=friend
+fromuser=twinkle
