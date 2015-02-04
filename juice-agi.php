@@ -45,7 +45,7 @@
     $origcallerid = $callerid;
     $callerid = dt($callerid);
     logit("---Start---");
-    $rc = execute_agi("ANSWER ");
+    $rc = execute_agi("ANSWER");
     sleep(1); // Wait for the channel to get created and RTP packets to be sent
     // On my system the welcome you would only hear 'elcome'  So I paused for 1 second
     #if they don't have caller ID, hang up.
@@ -94,7 +94,7 @@ findaccount:
             $name = $reply->name;
             $address1 = $reply->address1;
 #            sas("<prosody rate='slow'>Is your billing address </prosody> <prosody pitch='+10%'>$address1</prosody>", "accountloc3$account$d");
-            sas("<prosody rate='slow'>Is your billing address? </prosody> $address1 ", "accountloc$account$d");
+            sas("Is your billing address? $address1 ", "accountloc$account$d");
         };
     };
     $chosen = sagi('if correct press 1, if wrong press 2', 'iscorrect', '1', '2', true);
